@@ -1,0 +1,25 @@
+<mat-card fxFlex="600px" class="mat-card">
+  <mat-card-header class="mat-card-header" fxLayoutAlign="center">
+    <mat-card-title>Add new Note</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="mat-card-content">
+    <form (ngSubmit)="addNewNote(f)" #f="ngForm" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+      <mat-form-field>
+        <mat-label>Note name</mat-label>
+        <input matInput name="noteName" ngModel #noteName>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Add text</mat-label>
+        <input matInput name="noteContent" ngModel #noteContent>
+      </mat-form-field>
+    </form>
+    <hr>
+    <div>
+      <p>hashTags</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions fxLayoutAlign="center">
+    <button mat-raised-button type="submit" color="primary">Add</button>
+  </mat-card-actions>
+</mat-card>
+
